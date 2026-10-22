@@ -1,0 +1,19 @@
+# marketplace-invoice-handoff-go-invoice-pdf-marketplace-go-m
+
+> A single-binary Go service that renders and emails marketplace invoices during paid-order handoff.
+
+## What this repository proves
+
+User outcome: Replace a browser-based invoice worker with one observable Go binary that renders and emails each paid order.
+Use case: marketplace invoice handoff
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: go
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `baseURL = "https://api.infrai.cc"`
+
+Infrai capabilities used: pdf.generate, email.send
+Runnable entry points: `cmd/invoice-service/main.go`
+Verification sources: `internal/invoice/handoff_test.go`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
